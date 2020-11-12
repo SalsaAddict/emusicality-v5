@@ -1,7 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100% !important;
+}
+
 img.img-thumbnail {
     width: 64px;
     height: 64px;
     min-width: 64px;
     min-height: 64px;
+}
+
+.text-outline {
+    text-shadow: 0 0 5px black;
 }
