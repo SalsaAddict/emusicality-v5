@@ -54,8 +54,9 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "node_modules/bootswatch/dist/darkly/bootstrap.css",
+            "styles": [{
+                "input": "src/custom.scss"
+              },
               "node_modules/font-awesome/css/font-awesome.css",
               "node_modules/animate.css/animate.css",
               "src/styles.css"

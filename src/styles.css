@@ -1,7 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 html,
-body {
+body,
+.container-full-screen {
     height: 100% !important;
+    width: 100% !important;
+    min-width: 320px !important;
 }
 
 img.img-thumbnail {
@@ -12,5 +15,5 @@ img.img-thumbnail {
 }
 
 .text-outline {
-    text-shadow: 0 0 5px black;
+    text-shadow: 2px 2px 5px black;
 }

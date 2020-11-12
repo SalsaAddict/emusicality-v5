@@ -1,60 +1,63 @@
-<div class="h-100">
-    <div class="d-flex flex-column h-100">
-        <div class="bg-secondary p-2">
-            <div class="d-flex align-items-center">
-                <div class="mr-2">
-                    <img [src]="imageUrl" class="img-thumbnail">
-                </div>
-                <div class="text-nowrap mr-auto">
-                    <h5 class="m-0" [innerHTML]="title"></h5>
-                    <p class="m-0" [innerHTML]="artist"></p>
-                    <small class="text-muted" [innerHTML]="genre"></small>
-                </div>
-                <div>
-                    <a href="#" class="btn btn-lg btn-dark">
-                        <i class="fa fa-2x fa-times"></i>
-                    </a>
-                </div>
+<div class="container-full-screen d-flex flex-column align-items-center">
+    <!-- #region Header -->
+    <div class="w-100 bg-secondary p-2">
+        <div class="d-flex align-items-top">
+            <div class="mr-2">
+                <img [src]="imageUrl" class="img-thumbnail">
             </div>
-        </div>
-        <div class="embed-responsive embed-responsive-16by9 mb-auto">
-            <video class="embed-responsive-item position-absolute" src="assets/songs/esoesamor/video.mp4"></video>
-            <div class="embed-responsive-item position-absolute">
-                <div class="d-flex justify-content-around text-outline text-center">
-                    <div>
-                        <h5>
-                            <small class="initialism">Section</small>
-                            <br>
-                            <span>Verse</span>
-                        </h5>
-                    </div>
-                    <div>
-                        <h5>
-                            <small class="initialism">Section</small>
-                            <br>
-                            <span>Verse</span>
-                        </h5>
-                    </div>
-                </div>
+            <div class="text-nowrap mr-auto">
+                <h5 class="m-0" [innerHTML]="title"></h5>
+                <p class="m-0" [innerHTML]="artist"></p>
+                <small class="text-muted" [innerHTML]="genre"></small>
             </div>
-        </div>
-        <div class="bg-secondary p-2">
-            <div class="d-flex flex-row justify-content-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa fa-lg fa-fast-backward"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa fa-lg fa-backward"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa fa-lg fa-play"></i>
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                        <i class="fa fa-lg fa-forward"></i>
-                    </button>
-                </div>
+            <div>
+                <a href="#" class="btn btn-sm btn-dark">
+                    <i class="fa fa-times"></i>
+                </a>
             </div>
         </div>
     </div>
+    <!-- #endregion -->
+    <!-- #region Phrasing -->
+    <div class="embed-responsive embed-responsive-16by9">
+        <video id="videoElement" class="embed-responsive-item position-absolute" [class.invisible]="!showVideo"></video>
+
+    </div>
+    <!-- #endregion -->
+    <!-- #region Progress -->
+    <div class="content bg-secondary">
+        Progress Bar
+    </div>
+    <!-- #endregion -->
+    <!-- #region Tracks -->
+    <div class="h-100 content">
+        controls
+    </div>
+    <!-- #endregion -->
+    <!-- #region Footer -->
+    <div class="w-100 bg-secondary p-2">
+        <div class="d-flex flex-row justify-content-center">
+            <div class="mr-2">
+                <button type="button" class="btn" [class]="showVideo ? 'btn-primary' : 'btn-outline-primary'"
+                    [disabled]="!hasVideo" (click)="toggleVideo()">
+                    <i class="fa fa-lg fa-video-camera"></i>
+                </button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-lg fa-fast-backward"></i>
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-lg fa-backward"></i>
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-lg fa-play"></i>
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-lg fa-forward"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
 </div>
