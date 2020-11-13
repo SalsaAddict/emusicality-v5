@@ -22,6 +22,10 @@
     height: 100%;
 }
 
+.xyz {
+    font-size: 12pt;
+}
+
 /*
 .embed-responsive,
 .embed-responsive-item {
@@ -33,12 +37,5 @@
 .embed-responsive-item video {
     min-width: 320px !important;
     min-height: 180px !important;
-}
-
-.embed-responsive,
-.embed-responsive-item,
-.content {
-    width: 100% !important;
-    max-width: calc(calc(100vh * 0.5) / 0.5625) !important;
 }
 */
